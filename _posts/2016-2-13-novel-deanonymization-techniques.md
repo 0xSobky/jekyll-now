@@ -30,7 +30,7 @@ Now, we have an endpoint that points to an image resource when the email address
             alert('Deanonymized successfully!');
         }
     };
-    document.body.appendChild(img);
+    document.documentElement.appendChild(img);
 }('target@gmail.com'));
 {% endhighlight %}
 Note that I had reported this issue to the Google security team and it has been fixed a long time ago. ...end of story? Not so fast!
@@ -48,7 +48,7 @@ What happens if we simply use an endpoint that points to a non-existent resource
     script.onerror = function() {
         alert('Deanonymized successfully!');
     };
-    document.body.appendChild(script);
+    document.documentElement.appendChild(script);
 }('target@gmail.com'));
 {% endhighlight %}
 Oops! ...works like a charm (as of now, they fixed this by disallowing redirections on `GET` requests altogether) but with one little problem, Google makes use of the "`X-Content-Type-Options: nosniff`" header which tells a browser not to do content type sniffing, disallowing embedding resources that doesn't return the right MIME type. Luckily, Firefox [doesn't seem to respect that header](https://bugzilla.mozilla.org/show_bug.cgi?id=471020) while working with script elements, but Chrome does respect it! Well, not exactly! It turns out that Chrome doesn't respect it while working with external stylesheets and proceeds to interpret the resource anyway:
