@@ -56,7 +56,7 @@ Oops! ...works like a charm (as of now, they fixed this by disallowing redirecti
 So, all we have to do is use a link element instead of a script element when running on Chrome. Fair enough, here's one single generic exploit that combines all of these tricks together to deanonymize whoever you want, on whichever browser he uses, against whatever webapp you please:
 <div style="font-size: 75%">
 {% highlight javascript linenos %}
-/* 
+/**
  * Deanonymize a predefined group of users, given sufficient arguments.
  * @param attackMethod {string}, the method of the attack (either 'redirection' or 'statusCode').
  * @param endpoint {string}, the vulnerable endpoint with the user ID parameter last.
