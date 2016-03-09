@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 ---
-*__Note__: None of these projects are publicly released on GitHub at the moment; if you're interested in a pre-release demo, you may [drop me an email](mailto:0xsobky@gmail.com)!*
+*__Note__: Some of these projects are not yet publicly released on GitHub at the moment; if you're interested in a pre-release demo, you may [drop me an email](mailto:0xsobky@gmail.com)!*
 
 ## <a href="IDORit" href="https://github.com/0xsobky/IDORit">IDORit</a>:
  IDORit is a highly-configurable, one-of-its-kind automated scanner for insecure direct object reference vulnerabilities (IDORV).
