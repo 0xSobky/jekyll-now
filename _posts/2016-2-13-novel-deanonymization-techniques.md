@@ -8,7 +8,7 @@ Frankly, this is not really the first time I write about this kind of issues; I 
 
 Well, it all started with me logging into my Gmail account as usual, just to notice a redirection being made to a URI specified in a `GET` parameter named "___continue___" with my email address in a second `GET` parameter named "___email___". Here's our interesting endpoint:
 {% highlight css linenos %}
-https://accounts.google.com/endpoint?continue=<URI>&email=<email_address>
+https://accounts.google.com/AccountChooser?continue=<URI>&email=<email_address>
 {% endhighlight %}
 The fun starts when you tamper the value of that "___email___" param, as when you do that, you wouldn't get redirected to the URI specified in the "___continue___" param, but instead, you get redirected to a Gmail re-authentication page! While if you just tamper the value of the "___continue___" param, you still get redirected as long as it's a "[*.google.com](#)" endpoint and the "___email___" param does point to your own email address.
 
