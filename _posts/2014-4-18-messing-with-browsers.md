@@ -44,7 +44,7 @@ Firefox seems to have a very interesting behaviour when it comes to navigating f
 
 ***Notes:***
 
-[\*] As Opera was the first browser to get patched from that '204 No Content'-based spoof, I got credited here:* <a href="http://blogs.opera.com/security/2014/08/security-changes-opera-23/" target="_blank">http://blogs.opera.com/security/2014/08/security-changes-opera-23/</a>
+[\*] As Opera was the first browser to get patched from that '204 No Content'-based spoof, I got credited here: <a href="http://blogs.opera.com/security/2014/08/security-changes-opera-23/" target="_blank">http://blogs.opera.com/security/2014/08/security-changes-opera-23/</a>
 
 ***References:***
 
