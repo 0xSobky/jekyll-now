@@ -6,7 +6,8 @@ title: Abusing Facebook Social Plugins (for token leakage)
 
 Facebook does provide a variety of social plugins that web authors can deploy on third-party websites, but interestingly, a couple of these plugins were leaking sensitive tokens, including but not limited to, valid access tokens and mobile sessions (a.k.a m\_sess tokens).
 <br />
-Both of the two aforementioned social plugins returned similar results/responses when called with certain content filters such as the "connect" filter, for instance, a `GET` request as follows:
+
+Both of the two aforementioned social plugins (i.e. the activity feed plugin and the recommendations plugin) returned similarly interesting results/responses when embedded with certain content filters such as the "connect" filter. For instance, a `GET` request as follows:
 {% highlight python linenos %}
 GET https://www.facebook.com/plugins/activity.php?site=facebook.com&width=900&height=60000&header=true&skin=dark&filter=connect HTTP/1.1
 {% endhighlight %}
@@ -15,7 +16,7 @@ used to return an HTML document containing dozens of access\_token values append
 https://www.facebook.com/connect/login_success.html#access_token=AAWWxSSFWcsdf...krfrgdvDFfFF 
 {% endhighlight %}
 
-As you expected, these tokens were actually valid tokens originally issued for various apps including official ones like "Facebook for Blackberry", "Facebook for Android", etc. Each of these tokens was granted extended permissions with offline\_access too, where an attacker can easily exploit them to access private users' data and even turning the owner accounts into zombie ones for social spam campaigns!
+As you might have expected, these tokens were actually valid tokens originally issued for various apps including official ones like "Facebook for Blackberry", "Facebook for Android", etc. Each of these tokens was granted extended permissions with offline\_access too, where an attacker can easily exploit them to access private users' data and even turning the owner accounts into zombie ones for social spam campaigns!
 <br />
 
 Another interesting type of tokens—that was being leaked too—is the so called "m\_sess" token, which has been typically used for authentication all over the Facebook mobile site (m.facebook.com), and frankly, an attacker could have easily done something like: 
