@@ -7,7 +7,7 @@ title: Abusing Facebook Social Plugins (for token leakage)
 Facebook does provide a variety of social plugins that web authors can deploy on third-party websites, but interestingly, a couple of these plugins were leaking sensitive tokens, including but not limited to, valid access tokens and mobile sessions (a.k.a m\_sess tokens).
 <br />
 
-Both of the two aforementioned social plugins (i.e. the activity feed plugin and the recommendations plugin) returned similarly interesting results/responses when embedded with certain content filters such as the "connect" filter. For instance, a `GET` request as follows:
+Both of the two aforementioned social plugins (i.e. the activity feed plugin and the recommendations plugin) returned similarly interesting results/responses when embedded with certain content filters such as the "__connect__" filter. For instance, a `GET` request as follows:
 {% highlight python linenos %}
 GET https://www.facebook.com/plugins/activity.php?site=facebook.com&width=900&height=60000&header=true&skin=dark&filter=connect HTTP/1.1
 {% endhighlight %}
