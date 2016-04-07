@@ -2,7 +2,7 @@
 layout: post
 title: On Evading Facebook's Linkshim Mechanism
 ---
-*TL;DR: Here I'll be talking about an interesting bypass for the so called «linkshim system», which Facebook mainly relies upon to protect its users from malicious URLs shared across the whole platform....*
+_**TL;DR**: Here I'll be talking about an interesting bypass for the so called «linkshim system», which Facebook mainly relies upon to protect its users from malicious URLs shared across the whole platform...._
 
 In case you're not familiar with the term "Linkshim"---it's basically a mechanism that has been deployed since 2008, which whenever a user clicks an external link (from within Facebook), it checks that URL against an internal list of malicious domain names along with a bunch of other outsourced lists from McAfee, Google, Web of Trust (<a href="https://www.mywot.com/" target="_target">WoT</a>), et al.
 <br />
