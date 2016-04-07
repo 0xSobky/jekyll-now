@@ -33,11 +33,11 @@ which results in filtering out our XSS payload when `POST`ed, but when sent via 
 
 
 
-***Side Notes:***
+**Side Notes:**
 
 [*] Just in case you are wondering, the bounty payout for this issue was 1400$.
 <br />
 
-***References:***
+**References:**
 
 [*] <a href='https://hackerone.com/reports/39215' target='_blank'>https://hackerone.com/reports/39215</a>
