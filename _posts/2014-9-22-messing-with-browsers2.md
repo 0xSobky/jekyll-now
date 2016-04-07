@@ -2,7 +2,7 @@
 layout: post
 title: Messing Around with Web Browsers (Part II)
 ---
-*TL;DR: This would be a complementary entry for my previous writeup of the same title; here I'll be talking about an interesting download carpet bombing exploit alongside some functionality bug(s)....*
+_**TL;DR**: This would be a complementary entry for my previous writeup of the same title; here I'll be talking about an interesting download carpet bombing exploit alongside some functionality bug(s)...._
 
 Fine, most probably you're not familiar with the term "Download Carpet Bombing", given that it's not such a common type of browser bugs---nor a severe one---so just to relate, that term is basicaly derived from the military term "Carpet Bombing" which is meant to indicate a type of bombing attack where a carpet of explosives is dropped in a progressive manner so that it inflicts damage in every part of a terget area! Whilst in terms of web security, it's meant to indicate a type of attack in which a massive amount of data/files is automatically dropped into a target machine. Take a look at "<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2540" target="_blank">CVE-2008-2540</a>" for instance.
 <br />
