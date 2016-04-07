@@ -2,7 +2,7 @@
 layout: post
 title: Messing Around with Web Browsers (Part I)
 ---
-*TL;DR: Some interesting URL Spoofing attacks, some functionality bugs and a neat exploit to blow your favourite browser up ... just got excited after reading "The Browser Hacker's Handbook"!*
+_**TL;DR**: Some interesting URL Spoofing attacks, some functionality bugs and a neat exploit to blow your favourite browser up ... just got excited after reading "The Browser Hacker's Handbook"!_
 
 First things first, If you haven't read "<a href = "https://browserhacker.com" target="_target">The Browser Hacker's Handbook</a>" yet or haven't even heard about it before, you should definitely go and give it a read! Seriously, if "The Web Application Hacker's Handbook" is said to be the bible of web hackers, then this is to be---with all due respect---Jesus of web hackers!
 <br />
