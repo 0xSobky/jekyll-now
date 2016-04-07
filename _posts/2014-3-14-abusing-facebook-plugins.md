@@ -2,7 +2,7 @@
 layout: post
 title: Abusing Facebook Social Plugins (for token leakage)
 ---
-_**TL;DR:** By abusing Facebook social plugins like the activity feed plugin and/or the recommendations plugin, an attacker could retrieve valid sensitive tokens (e.g. access/m_sess tokens), unwittingly shared publicly across the Facebook platform...._
+_**TL;DR**: By abusing Facebook social plugins like the activity feed plugin and/or the recommendations plugin, an attacker could retrieve valid sensitive tokens (e.g. access/m_sess tokens), unwittingly shared publicly across the Facebook platform...._
 
 Facebook does provide a variety of social plugins that web authors can deploy on third-party websites, but interestingly, a couple of these plugins were leaking sensitive tokens, including but not limited to, valid access tokens and mobile sessions (a.k.a m\_sess tokens).
 <br />
