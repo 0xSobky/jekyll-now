@@ -2,7 +2,7 @@
 layout: post
 title: The Sneaky Facebook XSRF/CSRF!
 ---
-*TL;DR: A CSRF vulnerability that could reset a Facebook user's post-by-email address was hidden deep inside the Facebook mobile site, where you have to first trigger some kind of legacy browser fallback support and then to tweak with some parameter(s) to catch it!*
+_**TL;DR**: A CSRF vulnerability that could reset a Facebook user's post-by-email address was hidden deep inside the Facebook mobile site, where you have to first trigger some kind of legacy browser fallback support and then to tweak with some parameter(s) to catch it!_
 
 As you know, Facebook (and many other web services) does provide a post-by-email address that you can use to upload photos, videos or to post status updates to your account right from your email easily. That address is particularly useful in cases in which direct access to your Facebook account is not possible at the time....
 
