@@ -2,7 +2,7 @@
 layout: post
 title: Novel Techniques for User Deanonymization Attacks
 ---
-TL;DR: By abusing auth-based redirections and user-specific URIs on modern web applications, an attacker can easily identify and deanonymize any given predefined group of users across the web.
+_**TL;DR**: By abusing auth-based redirections and user-specific URIs on modern web applications, an attacker can easily identify and deanonymize any given predefined group of users across the web._
 
 Frankly, this is not really the first time I write about this kind of issues; I first drew attention to this in a thread I initially posted on the [webappsec mailing list](http://www.webappsec.org/lists/websecurity) almost a year ago<a href="#1">[1]</a>, but for some reason, that didn't receive enough attention. Hopefully, the implications I'm going to demonstrate in this writeup would be sufficient for people to start taking the appropriate precautions against this kind of privacy threats out there!
 
