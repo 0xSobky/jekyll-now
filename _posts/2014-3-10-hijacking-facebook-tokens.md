@@ -2,7 +2,7 @@
 layout: post
 title: Hijacking Facebook Apps' Access Tokens on the Fly!
 ---
-*TL;DR: Before Facebook's migration to OAuth 2.0, it was possible to hijack a valid access token of any given pre-authorized Facebook app by injecting a specially-crafted iframe through a simple MITM attack.*
+_**TL;DR:** Before Facebook's migration to OAuth 2.0, it was possible to hijack a valid access token of any given pre-authorized Facebook app by injecting a specially-crafted iframe through a simple MITM attack._
 
 Back in December of 2013, I've reported the following OAuth security issue to the Facebook security team:<br />
 Given a logged in Facebook user, a Man-In-The-Middle attack and a user-authorized Facebook application (say, Skype), an attacker can easily obtain/hijack an access token—while being transmitted over HTTP—for such application even if both of the canvas URL and the website URL of that app are "HTTPS" URIs. Here's how it goes: <br />
