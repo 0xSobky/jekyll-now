@@ -2,7 +2,7 @@
 layout: post
 title: The Tricky Vine XSS (input sanitization EPICFAIL!)
 ---
-*TL;DR: While doing some bug bounty hunting as usual, I ended up with a very cool reflected XSS vulnerability affecting <a href="https://vine.co">Vine</a>; here you can find the story behind it.*
+_**TL;DR**: While doing some bug bounty hunting as usual, I ended up with a very cool reflected XSS vulnerability affecting <a href="https://vine.co">Vine</a>; here you can find the story behind it._
 
 Vine is basically a short-form video sharing service acquired by Twitter, and is part of Twitter's bug bounty program ... so by heading to <a href="https://vine.co" target="_blank">vine.co</a>, you can notice that big search box over there on the top of the main page, right? That's exactly where our tricky XSS bug actually was!
 <br />
