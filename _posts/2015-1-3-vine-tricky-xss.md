@@ -4,7 +4,7 @@ title: The Tricky Vine XSS (input sanitization EPICFAIL!)
 ---
 _**TL;DR**: While doing some bug bounty hunting as usual, I ended up with a very cool reflected XSS vulnerability affecting <a href="https://vine.co">Vine</a>; here you can find the story behind it._
 
-Vine is basically a short-form video sharing service acquired by Twitter, and is part of Twitter's bug bounty program ... so by heading to <a href="https://vine.co" target="_blank">vine.co</a>, you can notice that big search box over there on the top of the main page, right? That's exactly where our tricky XSS bug actually was!
+Vine is basically a short-form video sharing service acquired by Twitter and is part of Twitter's bug bounty program. So by heading to <a href="https://vine.co" target="_blank">vine.co</a>, you can notice that big search box over there on the top of the main page, right? That's exactly where our tricky XSS bug actually was!
 <br />
 
 Yet this one is not your typical search XSS; you may go and submit some XSS payload like <code class="code">&lt;img src=x onerror=alert(1)></code>, just to find out that a zillion other bug bounty hunters have tested this before on every single input source possible! So basically, if you don't come up with an outlandish idea here, you're mostly doomed to fail, and that's exactly what I did. But right before that, I tested out a few tricks beside tweaking the payload:
