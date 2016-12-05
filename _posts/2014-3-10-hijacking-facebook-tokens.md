@@ -11,11 +11,11 @@ Given a logged in Facebook user, a Man-In-The-Middle attack and a user-authorize
 {% highlight html linenos %}
 <iframe src="https://www.facebook.com/dialog/oauth?redirect_uri=http%3A%2F%2Flogin.skype.com%2Flogin%2Foauth%3Fapplication%3Daccount&client_id=260273468396&response_type=token" width="0" height="0" />
 {% endhighlight %}
-3- The victim's web browser initiates a `GET` request to the endpoint specified in the source attribute of the injected iframe, and gets a 302 redirect back pointing to:
+3- The victim's web browser initiates a `GET` request to the endpoint specified in the source attribute of the injected iframe and gets a 302 redirect back pointing to:
 {% highlight html linenos %}
 http://login.skype.com/login/oauth?application=account#access_token=XXXXXXXXX
 {% endhighlight %}
-4- The attacker now intercepts that `GET` request (as it's transmitted over a regular HTTP connection, not HTTPS), and simply extracts the leaked access_token from the hash fragment.
+4- The attacker now intercepts that `GET` request (as it's transmitted over a regular HTTP connection, not HTTPS) and simply extracts the leaked access_token from the hash fragment.
 
 The **flaw** here is that in spite of the presence of a secure canvas/website URL (for Skype, in this example), Facebook still regards the HTTP version of the canvas/website URL to be a valid value for the '**redirect\_uri**' parameter, causing a hole in the secure authentication flow....
 
