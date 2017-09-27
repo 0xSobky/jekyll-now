@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Stuff
-permalink: /stuff/
+title: Projects
+permalink: /projects/
 ---
-## Projects
 
 #### <a name="XSSBuster" href="https://github.com/0xsobky/XSSBuster">XSSBuster</a>:
  XSSB is a proactive DOM sanitizer defending against client-side injection attacks.
@@ -20,6 +19,7 @@ AWS Extender CLI is a command-line script to test S3 buckets as well as Google S
 #### <a href="IDORit" href="https://github.com/0xsobky/IDORit">IDORit</a> (under development):
  IDORit is a highly-configurable, one-of-its-kind automated scanner for insecure direct object reference vulnerabilities (IDORV).
 
+
 ## Papers
 
- #### [Mass Surveillance and Internet Censorship Under Scrutiny](/papers/Mass%20Surveillance%20and%20Internet%20Censorship%20Under%20Scrutiny.pdf)
+#### [Mass Surveillance and Internet Censorship Under Scrutiny](/papers/Mass%20Surveillance%20and%20Internet%20Censorship%20Under%20Scrutiny.pdf)

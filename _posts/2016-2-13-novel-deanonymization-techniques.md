@@ -166,7 +166,7 @@ deanonymize('statusCode', 'https://twitter.com/intent/retweet?tweet_id=', [10001
 But why a tweet ID in particular? That's because I couldn't find any vulnerable user-specific endpoints there! So, alternatively, we exploit the fact that a twitter user cannot retweet his own tweets! (also fixed)
 
 # Conclusion:
-The modern web continues to prove itself as a very compromised zone; from timing attacks to nasty techniques like that, your identity and your data are, one way or another, prone to be exposed anytime as you navigate on. Do NOT browse while being authenticated to other web applications (or use <a href="https://www.requestpolicy.com" target="_blank">RequestPolicy</a> if possible). Do NOT allow scripts on untrusted websites (<a href="https://noscript.net">NoScript</a> is always a good idea; [AnonTab](/stuff/#AnonTab) too!).
+The modern web continues to prove itself as a very compromised zone; from timing attacks to nasty techniques like that, your identity and your data are, one way or another, prone to be exposed anytime as you navigate on. Do NOT browse while being authenticated to other web applications (or use <a href="https://www.requestpolicy.com" target="_blank">RequestPolicy</a> if possible). Do NOT allow scripts on untrusted websites (<a href="https://noscript.net">NoScript</a> is always a good idea; [AnonTab](/projects/#AnonTab) too!).
 
 # References:
 <a name="1" style="color: black">[1]: </a><a href="https://lists.w3.org/Archives/Public/public-webappsec/2015May/0043.html" target="_blank">https://lists.w3.org/Archives/Public/public-webappsec/2015May/0043.html</a><br />
