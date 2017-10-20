@@ -10,7 +10,7 @@ permalink: /projects/
 #### <a name="AnonTab" href="https://github.com/0xsobky/AnonTab">AnonTab</a>
  let AnonTab = \``${NoScript + HTTPSEverywhere + PrivateBrowsing + proxy}`\`;
 
-#### <a name="aws-extender" href="https://github.com/VirtueSecurity/aws-extender">AWS Extender</a>:
+#### <a name="aws-extender" href="https://github.com/VirtueSecurity/aws-extender">AWS Extender</a>
  AWS Extender is a Burp Suite extension to identify and test S3 buckets as well as Google Storage buckets and Azure Storage containers for common misconfiguration issues using the boto/boto3 SDK library.
 
 #### <a name="aws-extender-cli" href="https://github.com/VirtueSecurity/aws-extender-cli">AWS Extender CLI</a>
