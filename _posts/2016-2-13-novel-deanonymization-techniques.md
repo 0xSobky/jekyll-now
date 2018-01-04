@@ -147,7 +147,6 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
     }
     addListener.call(window, 'load', function() { assess(testFn); });
 }
-
 {% endhighlight %}
 </div>
 
