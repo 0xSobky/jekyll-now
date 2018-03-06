@@ -16,6 +16,9 @@ permalink: /projects/
 #### <a name="aws-extender-cli" href="https://github.com/VirtueSecurity/aws-extender-cli">AWS Extender CLI</a>
  AWS Extender CLI is a command-line script to test S3 buckets as well as Google Storage buckets and Azure Storage containers for common misconfiguration issues using the boto/boto3 SDK library.
 
+#### <a name="z00mtrack" href="https://github.com/0xsobky/z00mtrack">z00mtrack</a>
+ A proof-of-concept project for user tracking via the browser zoom levels.
+
 #### <a href="IDORit" href="https://github.com/0xsobky/IDORit">IDORit</a> (under development)
  IDORit is a highly-configurable, one-of-its-kind automated scanner for insecure direct object reference vulnerabilities (IDORV).
 
