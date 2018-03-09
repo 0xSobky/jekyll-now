@@ -29,15 +29,15 @@ But no such thing as:
 {% highlight PHP linenos %}
 htmlspecialchars($_GET["query"]);
 {% endhighlight %}
-which results in filtering out our XSS payload when `POST`ed, but when sent via `GET`, you find no filter! And this particular unexpected behavior has managed to keep that issue totally hidden in plain sight from a bunch of very skillful hackers out there!
+Which results in filtering out our XSS payload when `POST`ed, but when sent via `GET`, you find no filter! And this particular unexpected behavior has managed to keep that issue totally hidden in plain sight from a bunch of very skillful hackers out there!
 
 
 
 **Side Notes:**
 
-[*] Just in case you are wondering, the bounty payout for this issue was 1400$.
+[\*] Just in case you are wondering, the bounty payout for this issue was 1400$.
 <br />
 
 **References:**
 
-[*] <a href='https://hackerone.com/reports/39215' target='_blank'>https://hackerone.com/reports/39215</a>
+[\*] <a href='https://hackerone.com/reports/39215' target='_blank'>https://hackerone.com/reports/39215</a>
