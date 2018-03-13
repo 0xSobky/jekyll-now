@@ -19,6 +19,9 @@ permalink: /projects/
 #### <a name="z00mtrack" href="https://github.com/0xsobky/z00mtrack">z00mtrack</a>
  A proof-of-concept project for user tracking via the browser zoom levels.
 
+#### <a name="regaxor" href="https://github.com/0xSobky/Regaxor">Regaxor</a>
+ Regaxor (RegExp Haxxor) is a regular expression fuzzer, written in ECMAScript 6.
+
 #### <a href="IDORit" href="https://github.com/0xsobky/IDORit">IDORit</a> (under development)
  IDORit is a highly-configurable, one-of-its-kind automated scanner for insecure direct object reference vulnerabilities (IDORV).
 
