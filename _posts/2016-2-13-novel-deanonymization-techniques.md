@@ -55,7 +55,7 @@ Oops! ...works like a charm (as of now, they fixed this by disallowing redirecti
 <br /><a href="/images/ChConsole.png" target="_blank"><img class="innerImg" src="/images/ChConsole-thumb.png" alt="Chrome console"></a><br />
 So, all we have to do is use a link element instead of a script element when running on Chrome. Fair enough, here's one single generic exploit that combines all of these tricks together to deanonymize whoever you want, on whichever browser he uses, against whatever webapp you please:
 
-<div class="long-snippet">
+<div class="code long">
 {% highlight javascript linenos %}
 /**
  * Deanonymize a predefined group of users, given sufficient arguments.
