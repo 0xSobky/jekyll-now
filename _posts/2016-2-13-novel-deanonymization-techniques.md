@@ -4,7 +4,7 @@ title: Novel Techniques for User Deanonymization Attacks
 ---
 _**TL;DR**: By abusing auth-based redirections and user-specific URIs on modern web applications, an attacker can easily identify and deanonymize any given predefined group of users across the web._
 
-Frankly, this is not really the first time I write about this kind of issues; I first drew attention to this in a thread I initially posted on the [webappsec mailing list](http://www.webappsec.org/lists/websecurity) almost a year ago<a href="#1">[1]</a>, but for some reason, that didn't receive enough attention. Hopefully, the implications I'm going to demonstrate in this writeup would be sufficient for people to start taking the appropriate precautions against this kind of privacy threats out there!
+Frankly, this is not really the first time I write about this kind of issues; I first drew attention to this in a thread I initially posted on the [webappsec mailing list](http://www.webappsec.org/lists/websecurity) almost a year ago <a href="#1">[1]</a>, but for some reason, that didn't receive enough attention. Hopefully, the implications I'm going to demonstrate in this writeup would be sufficient for people to start taking the appropriate precautions against this kind of privacy threats out there!
 
 Well, it all started with me logging into my Gmail account as usual, just to notice a redirection being made to a URI specified in a `GET` parameter named "___continue___" with my email address in a second `GET` parameter named "___email___". Here's our interesting endpoint:
 {% highlight css linenos %}
