@@ -33,7 +33,7 @@ Now, we have an endpoint that points to an image resource when the email address
     document.documentElement.appendChild(img);
 }('target@gmail.com'));
 {% endhighlight %}
-Note that I had reported this issue to the Google security team and it has been fixed a long time ago. ...end of story? Not so fast!
+Note that I had reported this issue to the Google security team, and it has been fixed a long time ago. ...end of story? Not so fast!
 
 They initially pushed a short-term fix by implementing a regex-based blacklist (on top of their permissive whilelist), where they don't generally allow redirections to any endpoint that ends with a file extension such as "`.jpg`", "`.js`", "`.ico`", et al! Which basically means, if you can find an open redirect on "[*.google.com](#)" or even some endpoint that points to an embeddable resource but doesn't end with a file extension, you still have a working exploit! Great, but what if you are just not lucky enough to find something like that? Oh, no worries, the fun never ends:
 
