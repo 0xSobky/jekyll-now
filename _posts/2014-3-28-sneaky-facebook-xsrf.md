@@ -13,9 +13,9 @@ Location: https://m.facebook.com/photos/upload/?email_fallback
 Where an error message was suggesting me to upload my photos using my post-by-email address instead, as my browser doesn't seem to be supporting posting photos directly! Here's how that page looked like at that time:
 <br>
 <a href="/images/FB-XSRF.jpg" target="_blank"><img class="innerImg" src="/images/FBXSRF-thumb.jpg" alt="fallback"></a>
-And as you can see from the screenshot above, there's a "Reset Email Address" button which is when clicked, it submits a `POST` request containing an anti-CSRF token named "__fb\_dtsg__" and a parameter named "__reset\_email__" assigned the value of "__1__"; the obvious hunt here is to omit that "fb\_dtsg" parameter—or to alter its value—and then forwarding the request, right? 
+And as you can see from the screenshot above, there's a "Reset Email Address" button which is when clicked, it submits a `POST` request containing an anti-CSRF token named "__fb\_dtsg__" and a parameter named "__reset\_email__" assigned the value of "__1__"; the obvious hunt here is to omit that "fb\_dtsg" parameter—or to alter its value—and then forward the request, right? 
 
-Unfortunately, that didn't work and the token was being properly validated ... not until I came up with an outlandish idea "what if I submit that very parameter using a `GET` request instead of `POST`?", so I eventually forged this simple `GET` request:
+Unfortunately, that didn't work and the token was being properly validated ... not until this idea popped on my mind "What if I submit that very parameter using a `GET` request instead of `POST`?", so I eventually forged this simple `GET` request:
 {% highlight css linenos %}
 GET https://m.facebook.com/photos/upload/?email_fallback&reset_email HTTP/1.1
 {% endhighlight %}
