@@ -69,7 +69,7 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
     var elNodes, testFn;
     var output = [];
     // Register a new cross-browser event listener.
-    var addListener = (function() {
+    var addListener = (function () {
         return (window.addEventListener) ? window.addEventListener :
             // For IE8 and earlier versions support.
             function (evName, callback) {
@@ -81,7 +81,7 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
      * @param tagName {string}, elements' tag name.
      * @return {array}, an array of DOM nodes.
      */
-    var createElements = function(tagName) {
+    var createElements = function (tagName) {
         var i, l, el;
         var elNodes = [];
         for (i = 0, l = idList.length; i < l; i++) {
@@ -93,7 +93,7 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
                 el.rel = 'stylesheet';
             }
             if (tagName !== 'img') {
-                el.onerror = function() {
+                el.onerror = function () {
                     this.parentElement.removeChild(this);
                 };
             }
@@ -107,7 +107,7 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
      * @param testFn {function}, a test function.
      * @return void.
      */
-    var assess = function(testFn) {
+    var assess = function (testFn) {
         var i, l;
         for (i = 0, l = elNodes.length; i < l; i++) {
             if (testFn(elNodes[i])) {
@@ -125,13 +125,13 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
          * @param imageNode {object}, a DOM image node.
          * @return {boolean}.
          */
-        testFn = function(imgNode) {
+        testFn = function (imgNode) {
             if (imgNode.naturalHeight !== 0 && imgNode.naturalWidth !== 0) {
                 return true;
             }
             return false;
         };
-    } else if(attackMethod === 'statusCode') {
+    } else if (attackMethod === 'statusCode') {
         elNodes = (/chrome/i.test(navigator.userAgent)) ? createElements('link') :
                            createElements('script');
         /**
@@ -139,14 +139,14 @@ function deanonymize(attackMethod, endpoint, idList, callback) {
          * @param el {object}, a DOM element.
          * @return {boolean}.
          */
-        testFn = function(el) {
+        testFn = function (el) {
             if (el.parentNode !== document.documentElement) {
                 return true;
             }
             return false;
         };
     }
-    addListener.call(window, 'load', function() { assess(testFn); });
+    addListener.call(window, 'load', function () { assess(testFn); });
 }
 {% endhighlight %}
 </div>
